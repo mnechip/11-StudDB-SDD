@@ -195,7 +195,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFirstName)
         Me.Name = "Form1"
-        Me.Text = "Student Entry Form"
+        Me.Text = "v1.6.1 Student Entry Form"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

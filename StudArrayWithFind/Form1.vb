@@ -55,6 +55,8 @@
         students(studentCount).DOB = txtDOB.Text
         students(studentCount).gender = txtGender.Text
         students(studentCount).avMk = txtAvMk.Text
+        students(studentCount).phoneNo = txtPhone.Text
+        students(studentCount).paid = chkPaid.Checked
         studentCount += 1
         'return text boxes to blank ready for next entry
         txtFirstName.Text = ""
@@ -62,6 +64,8 @@
         txtDOB.Text = ""
         txtGender.Text = ""
         txtAvMk.Text = ""
+        txtPhone.Text = ""
+        chkPaid.Checked = False
         displayList()
     End Sub
     Private Sub displayList()
@@ -70,7 +74,7 @@
         'loop through the array to print all rows
         For i = 0 To studentCount - 1
             lstStud.Items.Add(students(i).firstname & " - " & students(i).lastname & " - " &
-                              students(i).DOB & " - " & students(i).gender & " - " & students(i).avMk & ".")
+                              students(i).DOB & " - " & students(i).gender & " - " & students(i).avMk & " - " & students(i).phoneNo & " - " & students(i).paid & ".")
         Next
     End Sub
 End Class

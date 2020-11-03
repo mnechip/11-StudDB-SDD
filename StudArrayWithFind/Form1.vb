@@ -49,6 +49,18 @@
         displayList()
     End Sub
     Private Sub btnAddStud_Click(sender As Object, e As EventArgs) Handles btnAddStud.Click
+        If Asc(txtGender.Text) <> 70 Then
+            If Asc(txtGender.Text) <> 77 Then
+                If Asc(txtGender.Text) <> 102 Then
+                    If Asc(txtGender.Text) <> 109 Then
+                        MsgBox("Please enter 'm' or 'f'", MsgBoxStyle.Exclamation, "Problem with Gender")
+                        txtGender.Focus()
+                        Exit Sub
+                    End If
+                End If
+            End If
+        End If
+
         'place text from text boxes into the array - first students(0), then students(1), students(2) etc
         students(studentCount).firstname = txtFirstName.Text
         students(studentCount).lastname = txtLastName.Text
